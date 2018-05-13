@@ -48,8 +48,7 @@ void setup()
   //seeding random for random pattern
   randomSeed(analogRead(10));
 }
-//xxxxxxxxxxxxxxxxxxxxFUNCTION LOOPxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
 
 void loop()
 {
@@ -75,10 +74,8 @@ void loop()
 }
 
 
-//xxxxxxxxxxxxxxxxxxxxFUNCTIONSxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+//Animations
 
-///////////////////////////////////////////////////////////turn all off
 void turnEverythingOff()
  {
    for(int i = 0; i<16; i++)
@@ -91,7 +88,7 @@ void turnEverythingOff()
    }
  }
  
-////////////////////////////////////////////////////////////turn all on
+
 void turnEverythingOn()
 {
   for(int i = 0; i<16; i++)
@@ -104,7 +101,7 @@ void turnEverythingOn()
     digitalWrite(layer[i], 1);
   }
 }
-///////////////////////////////////////////////////////turn columns off
+
 void turnColumnsOff()
 {
   for(int i = 0; i<16; i++)
@@ -112,7 +109,7 @@ void turnColumnsOff()
     digitalWrite(column[i], 1);
   }
 }
-/////////////////////////////////////////////////////////////flicker on
+
 void flickerOn()
 {
   int i = 150;
@@ -125,7 +122,7 @@ void flickerOn()
     i-= 5;
   }
 }
-//////////////turn everything on and off by layer up and down NOT TIMED
+
 void turnOnAndOffAllByLayerUpAndDownNotTimed()
 {
   int x = 75;
@@ -154,7 +151,7 @@ void turnOnAndOffAllByLayerUpAndDownNotTimed()
     }
   }
 }
-//////////////////////////turn everything on and off by column sideways
+
 void turnOnAndOffAllByColumnSideways()
 {
   int x = 75;
@@ -264,7 +261,7 @@ void turnOnAndOffAllByColumnSideways()
     }
   }
 }
-/////////////////////////////////////////up and down single layer stomp
+
 void layerstompUpAndDown()
 {
   int x = 75;
@@ -301,7 +298,7 @@ void layerstompUpAndDown()
     }
   }
 }
-////////////////////////////////////////////////////////////flicker off
+
 void flickerOff()
 {
   turnEverythingOn();
@@ -313,7 +310,7 @@ void flickerOff()
     delay(i);
   }
 }
-///////////////////////////////////////////around edge of the cube down
+
 void aroundEdgeDown()
 {
   for(int x = 200; x != 0; x -=50)
@@ -366,7 +363,7 @@ void aroundEdgeDown()
     }
   }
 }
-/////////////////////////////////////////////////////////random flicker
+
 void randomflicker()
 {
   turnEverythingOff();
@@ -384,7 +381,7 @@ void randomflicker()
   delay(x); 
   }
 }
-////////////////////////////////////////////////////////////random rain
+
 void randomRain()
 {
   turnEverythingOff();
@@ -408,7 +405,7 @@ void randomRain()
     digitalWrite(column[randomColumn], 1);
   }
 }
-/////////////////////////////////////////////////////diagonal rectangle
+
 void diagonalRectangle()
 {
   int x = 350;
@@ -498,7 +495,7 @@ void diagonalRectangle()
   delay(x);
   turnEverythingOff();
 }
-//////////////////////////////////////////////////////////////propeller
+
 void propeller()
 {
   turnEverythingOff();
@@ -561,7 +558,7 @@ void propeller()
   digitalWrite(column[15], 0);
   delay(x);
 }
-//////////////////////////////////////////////////////spiral in and out
+
 void spiralInAndOut()
 {
   turnEverythingOn();
@@ -601,7 +598,7 @@ void spiralInAndOut()
     delay(x);
     digitalWrite(column[9], 1);
     delay(x);
-    ///////////////////////////////////////spiral out counter clockwise
+    //spiral out counter clockwise
     digitalWrite(column[9], 0);
     delay(x);
     digitalWrite(column[10], 0);
@@ -634,7 +631,7 @@ void spiralInAndOut()
     delay(x);
     digitalWrite(column[0], 0);
     delay(x);
-    ///////////////////////////////////////spiral in counter clock wise
+    //spiral in counter clockwise
     digitalWrite(column[0], 1);
     delay(x);
     digitalWrite(column[4], 1);
@@ -667,7 +664,7 @@ void spiralInAndOut()
     delay(x);
     digitalWrite(column[6], 1);
     delay(x);
-    //////////////////////////////////////////////spiral out clock wise
+    // spiral out clockwise
     digitalWrite(column[6], 0);
     delay(x);
     digitalWrite(column[10], 0);
@@ -702,7 +699,7 @@ void spiralInAndOut()
     delay(x);
   }
 }
-//////////////////////////////////////go through all leds one at a time
+
 void goThroughAllLedsOneAtATime()
 {
   int x = 15;
